@@ -586,7 +586,7 @@ class RedisCacheTests(ScenarioTest):
             time.sleep(5*60)
         self.cmd('az redis update -n {name} -g {rg} --set "RedisVersion=6.0" "UpdateChannel=Preview"')
         if self.is_live:
-            time.sleep(10*60)
+            time.sleep(20*60)
         result = self.cmd('az redis show -n {name} -g {rg}').get_output_in_json()
         assert result['UpdateChannel'] == 'Preview'
         
