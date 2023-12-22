@@ -121,7 +121,7 @@ def cli_redis_create(cmd, client,
         identity=identity,
         public_network_access=None,
         tags=tags,
-        updateChannel=update_channel)
+        update_channel=update_channel)
     return client.begin_create(resource_group_name, name, params)
 
 
